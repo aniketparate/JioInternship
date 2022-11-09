@@ -1,0 +1,44 @@
+11-08 23:55:52 Connection to the 127.0.0.1 for user root created successfully.
+11-08 23:55:52 https://community.oacle.com/tech/developers/
+11-08 23:55:52 NotReachable HTTPSConnectionPool(host='community.oacle.com', port=443): Max retries exceeded with url: /tech/developers/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa5005b3880>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+11-08 23:55:52 https://compareeapssl.com/invalid-url-how-to-fix-invalid-url-issues-on-chrome/
+11-08 23:55:52 NotReachable HTTPSConnectionPool(host='compareeapssl.com', port=443): Max retries exceeded with url: /invalid-url-how-to-fix-invalid-url-issues-on-chrome/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa5005b2dd0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+11-08 23:55:52 https://powerusers.microft.com/t5/General-Power-Automate/
+11-08 23:55:52 NotReachable HTTPSConnectionPool(host='powerusers.microft.com', port=443): Max retries exceeded with url: /t5/General-Power-Automate/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa5005b20e0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+11-08 23:55:52 https://social.tnet.microsoft.com/forums/sharepoint/en-US/8424a9fa-aa42-4246-8efc-f4731318f265/generating-invalid-url
+11-08 23:55:52 NotReachable HTTPSConnectionPool(host='social.tnet.microsoft.com', port=443): Max retries exceeded with url: /forums/sharepoint/en-US/8424a9fa-aa42-4246-8efc-f4731318f265/generating-invalid-url (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa4fff54850>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+11-08 23:55:52 https://stackoverfl.com/questions/1547899/which-characters-make-a-url-invalid
+11-08 23:55:53 NotReachable HTTPSConnectionPool(host='stackoverfl.com', port=443): Max retries exceeded with url: /questions/1547899/which-characters-make-a-url-invalid (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa4fff54a90>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+11-08 23:55:53 https://support.goog.com/merchants/answer/160038?hl=en
+11-08 23:55:53 NotReachable HTTPSConnectionPool(host='support.goog.com', port=443): Max retries exceeded with url: /merchants/answer/160038?hl=en (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa4fff54850>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+11-08 23:55:53 https://twitter.com/
+11-08 23:55:54 Valid
+11-08 23:55:54 https://www.amazon.com/
+11-08 23:55:54 InValid
+11-08 23:55:54 https://www.amazon.com/: is Not reachable, status_code: 503
+11-08 23:55:54 https://www.apple.com/
+11-08 23:55:55 Valid
+11-08 23:55:55 https://www.eduba.com/popular/mysql/
+11-08 23:55:55 NotReachable HTTPSConnectionPool(host='www.eduba.com', port=443): Max retries exceeded with url: /popular/mysql/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa4fff89660>: Failed to establish a new connection: [Errno 111] Connection refused'))
+11-08 23:55:56 https://www.facebook.com/
+11-08 23:55:56 Valid
+11-08 23:55:56 https://www.geeksforges.org/check-if-an-url-is-valid-or-not-using-regular-expression/
+11-08 23:55:56 NotReachable HTTPSConnectionPool(host='www.geeksforges.org', port=443): Max retries exceeded with url: /check-if-an-url-is-valid-or-not-using-regular-expression/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa4fff8b0d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+11-08 23:55:56 https://www.lifewire.com/
+11-08 23:55:56 InValid
+11-08 23:55:56 https://www.lifewire.com/: is Not reachable, status_code: 405
+11-08 23:55:56 https://www.microsoft.com/en-in/
+11-08 23:55:57 Valid
+11-08 23:55:57 https://www.msqltutorial.net/mysql-select-database/
+11-08 23:55:58 NotReachable HTTPSConnectionPool(host='www.msqltutorial.net', port=443): Max retries exceeded with url: /mysql-select-database/ (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa4fffa5780>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+11-08 23:55:58 https://www.mstecogs.com/paul/quick-and-simple-solve-invalid-url-parameter-problem-with-updatelistitems-in-lists-asmx
+11-08 23:55:58 NotReachable HTTPSConnectionPool(host='www.mstecogs.com', port=443): Max retries exceeded with url: /paul/quick-and-simple-solve-invalid-url-parameter-problem-with-updatelistitems-in-lists-asmx (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa4fffa50c0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+11-08 23:55:58 https://www.netflix.com/in/
+11-08 23:56:01 Valid
+11-08 23:56:01 https://www.tiktok.com/about
+11-08 23:56:01 Valid
+11-08 23:56:01 https://www.whatsapp.com/
+11-08 23:56:02 Valid
+11-08 23:56:02 https://www.youtube.com/
+11-08 23:56:03 Valid
+11-08 23:56:03 Connection disabled
