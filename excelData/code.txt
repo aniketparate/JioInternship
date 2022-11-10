@@ -1,0 +1,18 @@
+import pandas as pd
+import re
+
+def use_regex(input_text):
+    pattern = re.compile("हिंदी", re.IGNORECASE)
+    a = pattern.search(input_text)
+    if a:
+        print(True)
+    else:
+        print(False)
+
+file = "magnet_brain_hindi.xlsx"
+data = pd.read_excel(file, usecols=['playlist_name'])
+
+
+for i in data.itertuples():
+    print(i[0])
+    use_regex(i[1])
