@@ -28,19 +28,32 @@ def findClass(input_text):
 
 
 def findMedium(input_text):
-    string = "[A-Z][a-z]+(?= medium)", "(?<= medium)[A-Z][a-z]+"
+    string = "[\u0900-\u097F]+(?= medium)", "[A-Z][a-z]+(?= medium)", "(?<= medium)[A-Z][a-z]+"
     medium = "hindi", "english", "हिंदी"
     num = string.__len__()
     i = 0
     while i != num:
         pattern = re.compile(string[i], re.IGNORECASE)
         srh = pattern.search(input_text)
-        if srh:
-            print(True)
-            i+=1
-        else:
-            print(False)
-            i+=1
+        
+        for med in medium:
+            if srh == None:
+                i+=1
+                pass
+            elif med == srh[0]:
+                print(True, med, srh[0])
+                i+=1
+            else:
+                print(False, med, srh[0])
+                i+=1
+
+
+        # if srh:
+        #     print(True)
+        #     i+=1
+        # else:
+        #     print(False)
+        #     i+=1
 
     # str = 'Class 12 Hindi (Core) Hindi Medium Hello सभी State Boards के लिए। सभी पाठ उपलब्ध'
     
@@ -62,3 +75,4 @@ data = pd.read_excel(file, usecols=['playlist_name'])
 for i in data.itertuples():
     print(i[0])
     findMedium(i[1])
+    # findClass(i[1])

@@ -22,6 +22,8 @@
 
 import re
 pattern = re.compile("[\u0900-\u097F]+(?= medium)", re.IGNORECASE)
-# pattern = re.compile("[\u0900-\u097F]+(?= medium)", re.IGNORECASE)
-str = 'Class 12 Hindi (Core) Hindi सभी हिंदी Medium State Boards के लिए। सभी पाठ उपलब्ध'
-print(pattern.search(str))
+# pattern = re.compile("(?<= medium)[\u0900-\u097F]+", re.IGNORECASE)
+str = 'Class 12 Hindi (Core) Hindi हिंदी Medium लिए सभी पाठ उपलब्ध'
+a = pattern.search(str)
+print(a[0])
+# Class 12 Hindi (Core) Hindi हिंदी Medium लिए । सभी पाठ उपलब्ध
