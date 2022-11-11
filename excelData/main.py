@@ -46,7 +46,7 @@ def findMedium(input_text):
                 i+=1
             else:
                 print(False, med, srh[0])
-                i+=1
+                i+=1    
     
 def findSubject(input_text):
     string = "(?<=class )[0-9]+ [A-Z][a-z]+", "(?<=class )[0-9]+[A-Z][a-z]+ [A-Z][a-z]+", "(?<=class )[0-9]+[A-Z][a-z]+ [\u0900-\u097F]+", "(?<=class )[0-9]+ [\u0900-\u097F]+"
