@@ -68,10 +68,11 @@ def findAuthor():
     pass
 
 file = "magnet_brain_hindi.xlsx"
-dataPlaylistName = pd.read_excel(file, usecols=['playlist_name', 'asset_title'])
+data = pd.read_excel(file, usecols=['playlist_name', 'asset_title'])
 
-for i in dataPlaylistName.itertuples():
+for i in data.itertuples():
     print(i[0])
+    # print(i[2])
     # findMedium(i[1])
     findClass(i[1])
     # findSubject(i[2])
