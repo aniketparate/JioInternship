@@ -11,7 +11,7 @@ import re
 #         print(False)
 
 
-def findClass(input_text):
+def findClass(id, input_text):
     string = "(?<=class )[0-9]+", "(?<=कक्षा )[0-9]+"
     i = 0
     num = string.__len__()
@@ -23,12 +23,13 @@ def findClass(input_text):
             pass
             i+=1
         else:
-            print(i)
-            print(srh[0])
+            data.loc[id, ['class']] = [srh[0]]
+            # print(i)
+            # print(srh[0])
             i+=1
 
 
-def findMedium(input_text):
+def findMedium(id, input_text):
     string = "[\u0900-\u097F]+(?= medium)", "\w+(?= medium)", "(?<= medium)\w+", "(?<= medium )[\u0900-\u097F]+"
     medium = "hindi", "english", "हिंदी", "अंग्रेज़ी", "एन्ग्लिश्"
     num = string.__len__()
@@ -48,7 +49,7 @@ def findMedium(input_text):
                 print(False, med, srh[0])
                 i+=1    
     
-def findSubject(input_text):
+def findSubject(id, input_text):
     string = "(?<=class )[0-9]+ [A-Z][a-z]+", "(?<=class )[0-9]+[A-Z][a-z]+ [A-Z][a-z]+", "(?<=class )[0-9]+[A-Z][a-z]+ [\u0900-\u097F]+", "(?<=class )[0-9]+ [\u0900-\u097F]+"
     subject ="Political"
     i = 0
@@ -67,7 +68,7 @@ def findSubject(input_text):
             i+=1
             print(srh[0].split()[1])
 
-def findAuthor(input_text):
+def findAuthor(id, input_text):
     pattern = re.compile("(?<=by )[A-Z][a-z]+ [A-Z][a-z]+", re.IGNORECASE)
     srh = pattern.search(input_text)
 
@@ -77,12 +78,14 @@ def findAuthor(input_text):
         print(srh[0])
 
 file = "magnet_brain_hindi.xlsx"
-data = pd.read_excel(file, usecols=['playlist_name', 'asset_title', 'description'])
+newUpdatedFile = "update_" + file
+data = pd.read_excel(file)
 
 for i in data.itertuples():
-    print(i[0])
-    # print(i[2])
-    #findMedium(i[1])
-    #findClass(i[1])
-    #findSubject(i[1])
-    #findAuthor(i[3])
+    findClass(i[0], i[7])
+    # findMedium(i[0], i[1])
+    #findSubject(i[0], i[1])
+    #findAuthor(i[0], i[3])
+
+data.to_excel(newUpdatedFile, index=False)
+print(data)

@@ -3,11 +3,10 @@ import re
 import pandas as pd
 
 
-def findClass(input_text):
+def findClass(id, input_text):
     string = "(?<=class )[0-9]+", "(?<=कक्षा )[0-9]+"
     i = 0
     num = string.__len__()
-    update = data['class'] = ('')
     while i != num:
         pattern = re.compile(string[i], re.IGNORECASE)
         srh = pattern.search(input_text)
@@ -15,22 +14,20 @@ def findClass(input_text):
             pass
             i+=1
         else:
-            # print(i)
+            data.loc[id, ['class']] = [srh[0]]
             print(srh[0])
             i+=1
-        # data.loc[update, 'class']  = srh[0]
             
 
 file = "test1.xlsx"
+newUpdatedFile = "update_" + file
 data = pd.read_excel(file)
 
 for i in data.itertuples():
-    # print(i[2])
-    # findClass(i[1])
-    findClass(i[2])
- 
+    print(i[0])
+    # print(i[1])
+    findClass(i[0], i[2])
+    
 
-# update = data['class'] = ''
-# data.loc[update, 'class']  = output
-# print(data)
-
+data.to_excel(newUpdatedFile, index=False)
+print(data)
