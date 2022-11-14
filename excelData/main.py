@@ -30,8 +30,8 @@ def findClass(id, input_text):
 
 
 def findMedium(id, input_text):
-    string = "[\u0900-\u097F]+(?= medium)", "\w+(?= medium)", "(?<= medium)\w+", "(?<= medium )[\u0900-\u097F]+"
-    medium = "hindi", "english", "हिंदी", "अंग्रेज़ी", "एन्ग्लिश्"
+    string = "[\u0900-\u097F]+(?= medium)", "[A-Z][a-z]+(?= medium)", "(?<= medium)[A-Z][a-z]+", "(?<= medium )[\u0900-\u097F]+"
+    medium = "hindi", "english", "हिंदी", "अंग्रेज़ी"
     num = string.__len__()
     i = 0
     while i != num:
@@ -82,10 +82,10 @@ newUpdatedFile = "update_" + file
 data = pd.read_excel(file)
 
 for i in data.itertuples():
-    findClass(i[0], i[7])
-    # findMedium(i[0], i[1])
-    #findSubject(i[0], i[1])
-    #findAuthor(i[0], i[3])
+    # findClass(i[0], i[7])
+    # findMedium(i[0], i[7])
+    # findSubject(i[0], i[7])
+    # findAuthor(i[0], i[9])
 
-data.to_excel(newUpdatedFile, index=False)
-print(data)
+# data.to_excel(newUpdatedFile, index=False)
+# print(data)
