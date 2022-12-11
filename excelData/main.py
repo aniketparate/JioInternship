@@ -66,6 +66,13 @@ class findColumnData:
         else:
             data.loc[id, ['author_name']] = [srh[0]]
 
+    def findChapter(self, id, input_text):
+        pattern = re.compile("(?<=Chapter:\s)(.*?)\(", re.IGNORECASE)
+        srh = pattern.search(input_text)
+        if srh == None:
+            pass
+        else:
+            data.loc[id, ['chapter_name']] = [srh[0].split(r'/')[0].split('(')[0].split('-')[0]]
 
 if __name__ == '__main__':
     file = "magnet_brain_hindi.xlsx"
@@ -76,10 +83,11 @@ if __name__ == '__main__':
     colData = findColumnData()
 
     for i in data.itertuples():
-        colData.findClass(i[0], i[7])
-        colData.findMedium(i[0], i[7])
-        colData.findSubject(i[0], i[7])
-        colData.findAuthor(i[0], i[16])
+        colData.findClass(i[0], i[8])
+        colData.findMedium(i[0], i[8])
+        colData.findSubject(i[0], i[8])
+        colData.findChapter(i[0], i[17])
+        colData.findAuthor(i[0], i[17])
 
     data.to_excel(newUpdatedFile, index=False)
     print(data)
