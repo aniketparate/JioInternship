@@ -47,7 +47,25 @@
 
 # Thinkers, Beliefs and Buildings - One Shot Revision | Class 12 History Ch 4 in Hindi |UP/Bihar Board"
 
+# Chapter: Atma Parichay, Ek Geet/आत्म-परिचय, एक गीत (Chapter 1) 
 
+import re
+pattern = re.compile("(?<=Chapter:\s)(.*?)\(", re.IGNORECASE)
+str = 'Chapter: Atma Parichay, Ek Geet/आत्म-परिचय, एक गीत (Chapter 1)'
+srh = pattern.search(str)
 
+print(srh[0].strip().split('(')[0])
 
-
+# "(?<=Chapter:\s).*(?=\s()"
+#  
+# ha try kar
+# (?<= Chapter: ) [A-Z]+[\u0900-\u097F]+
+# bc toh (chapte yetoyea
+# aplayala baher chi matlab na chapter gela bhosadyat
+# ajun ek aahe thamb
+# bc mi v4 karat hoto ha chapter kasa yetoye lol hahahah
+#bc split marun kiti marshil asa
+# zala
+# print(aniket is sexy boy)
+#  hahahahcaahhahal
+# chal re lavkar kar
